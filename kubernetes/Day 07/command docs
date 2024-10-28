@@ -1,0 +1,16 @@
+Imparative ways and declarative ways
+
+# Imparative way
+1. kubectl run nginx-pod --image=nginx:latest (Imparative way run the container in a pod) 
+2. kubectl get pods (Imparative way to get the node information)
+3. kubectl get pod nginx-pod -o wide (check the pod information)
+4. kubectl delete pod nginx-pod (delete the pod)
+
+
+# Declarative way
+1. kubectl apply -f nginx-basic.yaml (Run the container declaratively in a pod)
+2. kubectl describe pod nginx-pod (check the pod information)
+3. kubectl exec -it nginx-pod bash (login bash in the pod)
+4. kubectl exec -it nginx-pod -- sh (login sh in the pod shell mode)
+5. kubectl get pod nginx-pod --show-labels -o wide (check the pod information)
+6. kubectl get pods -o wide (check the node information)

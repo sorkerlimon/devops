@@ -2,12 +2,15 @@
 install kind and kubectl from documents and must docker install
 
 # Day 06 create cluster
-
 1. kind create cluster --image kindest/node:v1.31.0@sha256:53df588e04085fd41ae12de0c3fe4c72f7013bba32a20e7325357a1ac94ba865 --name cka-cluster1
 2. kind create cluster --image kindest/node:v1.31.0@sha256:53df588e04085fd41ae12de0c3fe4c72f7013bba32a20e7325357a1ac94ba865 --name cka-cluster2 --config config.yaml
 
-# Essential command
+# Day 06 Delete cluster
+1. kind get clusters 
+2. kind delete cluster --name cka-cluster1
 
+# Essential command
 1. kubectl get nodes (Current cluster node check)
 2. kubectl config get-contexts ( To check current cluster)
 3. kubectl config   use-context cka-cluster1 (To switch cluster)
+4. kubectl cluster-info --context kind-cka-cluster2 (To check cluster information)
